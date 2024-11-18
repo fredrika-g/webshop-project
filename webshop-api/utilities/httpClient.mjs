@@ -1,7 +1,8 @@
 export const fetchData = async (endpoint, body = null) => {
-  const url = `${process.env.BASE_URL}${process.env.DB_PORT}/products`;
+  const url = `${process.env.BASE_URL}${process.env.DB_PORT}/${endpoint}`;
   try {
     const response = body ? await fetch(url, body) : await fetch(url);
+    console.log(response);
 
     if (response.ok) {
       const result = await response.json();
