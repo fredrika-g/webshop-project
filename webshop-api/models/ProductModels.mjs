@@ -12,6 +12,6 @@ export class SingleProductModel extends ProductsModel {
   constructor(id, title, price, categories, stock, description) {
     super(id, title, price, categories, stock);
 
-    this.description = this.description;
+    this.description = description;
   }
 }

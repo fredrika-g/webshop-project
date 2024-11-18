@@ -13,10 +13,11 @@ const DB_PORT = process.env.DB_PORT;
 const BASE_URL = process.env.BASE_URL;
 
 // middleware
+app.use(cors());
 app.use(express.json());
 app.use('/products', products);
 
 // starting server...
-app.listen(5050, () => {
-  console.log(`Servern är startad och lyssnar på port 5001`);
+app.listen(PORT, () => {
+  console.log(`Servern är startad och lyssnar på port ${PORT}`);
 });

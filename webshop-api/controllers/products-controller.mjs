@@ -20,10 +20,9 @@ export const listProducts = async (req, res) => {
     });
 
     res.status(200).json({ success: true, result: products });
-    res.status(200).json({ success: true, result: products });
+    return products;
   } catch (error) {
     console.log(error);
-    res.status(500).json({ success: false, message: error });
     res.status(500).json({ success: false, message: error });
   }
 };
@@ -43,6 +42,7 @@ export const findProduct = async (req, res) => {
     );
 
     res.status(200).json({ success: true, result: product });
+    return product;
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: error });
