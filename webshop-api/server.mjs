@@ -17,6 +17,6 @@ app.use(express.json());
 app.use('/products', products);
 
 // starting server...
-app.listen(5001, () => {
+app.listen(5050, () => {
   console.log(`Servern är startad och lyssnar på port 5001`);
 });
