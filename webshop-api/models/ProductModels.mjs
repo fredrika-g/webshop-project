@@ -1,10 +1,10 @@
 export class ProductsModel {
   constructor(id, title, price, categories, stock) {
-    this.id = id;
+    this.id = Number(id);
     this.title = title;
-    this.price = price;
+    this.price = Number(price);
     this.categories = categories;
-    this.stock = stock;
+    this.stock = Number(stock);
   }
 }
 

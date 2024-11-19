@@ -11,7 +11,24 @@ export const getProducts = async () => {
 
       return products;
     } else {
-      console.log('Error!');
+      console.log('Something went wrong in: /products');
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getAProduct = async (productId: number) => {
+  console.log(`${url}${productId}`);
+  try {
+    const result = await axios.get(`${url}${productId}`);
+
+    if (result.status === 200) {
+      const product = result.data.result;
+
+      return product;
+    } else {
+      console.log(`Something went wrong in /products/${productId}`);
     }
   } catch (error) {
     console.log(error);

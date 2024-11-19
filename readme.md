@@ -12,9 +12,9 @@ Kör kommandona i terminalen för att installera projektet:
 
 Starta sedan projektet:
 
-- Stå i /app, kör `npm run dev`.
+- Stå i /apps, kör `npm run dev`.
 
-Detta startar det som behövs för att köra projekter.
+Detta startar det som behövs för att köra projektet.
 
 Projektet startas i port 4000:
 http://localhost:4000/

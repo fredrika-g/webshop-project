@@ -13,14 +13,13 @@ export const listProducts = async (req, res) => {
           product.id,
           product.title,
           product.price,
-          result.categories,
-          result.stock
+          product.categories,
+          product.stock
         )
       );
     });
 
     res.status(200).json({ success: true, result: products });
-    return products;
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: error });
@@ -42,7 +41,6 @@ export const findProduct = async (req, res) => {
     );
 
     res.status(200).json({ success: true, result: product });
-    return product;
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: error });
