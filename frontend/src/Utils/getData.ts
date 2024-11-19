@@ -8,7 +8,6 @@ export const getProducts = async () => {
 
     if (result.status === 200) {
       const products = result.data.result;
-
       return products;
     } else {
       console.log('Something went wrong in: /products');

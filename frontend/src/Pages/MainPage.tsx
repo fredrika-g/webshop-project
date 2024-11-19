@@ -5,6 +5,9 @@ import { IProduct } from '../Models/IProduct';
 
 import { MainLayout } from '../Layouts/MainLayout';
 
+import { GridList } from '../Components/UI/GridList';
+import { Card } from '../Components/UI/Card';
+
 export const MainPage = () => {
   const [products, setProducts] = useState<IProduct[]>();
 
@@ -18,12 +21,12 @@ export const MainPage = () => {
 
   return (
     <MainLayout>
-      <div>
+      <GridList>
         {products &&
           products.map((product) => {
-            return <h3 key={product.id}>{product.title}</h3>;
+            return <Card key={product.id} product={product} />;
           })}
-      </div>
+      </GridList>
     </MainLayout>
   );
 };

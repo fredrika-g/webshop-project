@@ -4,7 +4,7 @@
       "id": "1",
       "title": "Julgran i plast, 180 cm",
       "price": "499",
-      "categories": ["Jul", "Dekoration"],
+      "categories": ["jul", "dekoration"],
       "stock": "120",
       "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
     },
@@ -12,7 +12,7 @@
       "id": "2",
       "title": "Adventsljusstake i trä",
       "price": "199",
-      "categories": ["Jul", "Belysning"],
+      "categories": ["jul", "belysning"],
       "stock": "75",
       "description": "Klassisk adventsljusstake i trä med sju ljus för att sprida julstämning."
     },
@@ -20,7 +20,7 @@
       "id": "3",
       "title": "Julgranskulor, 20-pack",
       "price": "129",
-      "categories": ["Jul", "Dekoration"],
+      "categories": ["jul", "dekoration"],
       "stock": "300",
       "description": "Set med 20 julgranskulor i blandade färger och mönster."
     },
@@ -28,7 +28,7 @@
       "id": "4",
       "title": "Pepparkaksformar, 10-pack",
       "price": "89",
-      "categories": ["Jul", "Bakning"],
+      "categories": ["jul", "bakning"],
       "stock": "200",
       "description": "Roliga pepparkaksformar i olika julmotiv som granar och stjärnor."
     },
@@ -36,7 +36,7 @@
       "id": "5",
       "title": "LED-ljusslinga, 10 meter",
       "price": "249",
-      "categories": ["Jul", "Belysning"],
+      "categories": ["jul", "belysning"],
       "stock": "50",
       "description": "Energisnål LED-ljusslinga som passar både inomhus och utomhus."
     },
@@ -44,7 +44,7 @@
       "id": "6",
       "title": "Tomtedräkt för vuxna",
       "price": "349",
-      "categories": ["Jul", "Kläder"],
+      "categories": ["jul", "kläder"],
       "stock": "30",
       "description": "En klassisk tomtedräkt med hatt, jacka och byxor för julens festligheter."
     },
@@ -52,7 +52,7 @@
       "id": "7",
       "title": "Doftljus med kanel och äpple",
       "price": "129",
-      "categories": ["Jul", "Hem"],
+      "categories": ["jul", "hem"],
       "stock": "150",
       "description": "Ett doftljus som sprider en varm och kryddig doft av jul."
     },
@@ -60,7 +60,7 @@
       "id": "8",
       "title": "Julstrumpa i filt",
       "price": "99",
-      "categories": ["Jul", "Dekoration"],
+      "categories": ["jul", "dekoration"],
       "stock": "250",
       "description": "En traditionell julstrumpa för presenter, gjord av mjuk filt."
     },
@@ -68,7 +68,7 @@
       "id": "9",
       "title": "Presentpapper, 5 rullar",
       "price": "69",
-      "categories": ["Jul", "Presentinslagning"],
+      "categories": ["jul", "presentinslagning"],
       "stock": "400",
       "description": "Set med fem rullar presentpapper i olika julmönster."
     },
@@ -76,7 +76,7 @@
       "id": "10",
       "title": "Jultröja med renmotiv",
       "price": "279",
-      "categories": ["Jul", "Kläder"],
+      "categories": ["jul", "kläder"],
       "stock": "60",
       "description": "En mysig jultröja med ett charmigt renmotiv och mjukt material."
     },
@@ -84,7 +84,7 @@
       "id": "11",
       "title": "Glöggmuggar, 4-pack",
       "price": "149",
-      "categories": ["Jul", "Kök"],
+      "categories": ["jul", "kök"],
       "stock": "90",
       "description": "Set med fyra små glöggmuggar med traditionellt julmotiv."
     },
@@ -92,7 +92,7 @@
       "id": "12",
       "title": "Julkalender för chokladälskare",
       "price": "199",
-      "categories": ["Jul", "Mat & Dryck"],
+      "categories": ["jul", "mat & dryck"],
       "stock": "180",
       "description": "En julkalender fylld med chokladpraliner för att räkna ner till julafton."
     },
@@ -100,7 +100,7 @@
       "id": "13",
       "title": "Snöglob med julmotiv",
       "price": "159",
-      "categories": ["Jul", "Dekoration"],
+      "categories": ["jul", "dekoration"],
       "stock": "80",
       "description": "Vacker snöglob med en scen från en julig vinterdag."
     },
@@ -108,7 +108,7 @@
       "id": "14",
       "title": "Julpyssel för barn",
       "price": "99",
-      "categories": ["Jul", "Pyssel"],
+      "categories": ["jul", "pyssel"],
       "stock": "300",
       "description": "Ett kit med papper, klistermärken och glitter för julpyssel."
     },
@@ -116,7 +116,7 @@
       "id": "15",
       "title": "Jultallrikar, 6-pack",
       "price": "249",
-      "categories": ["Jul", "Kök"],
+      "categories": ["jul", "kök"],
       "stock": "40",
       "description": "Set med sex tallrikar med dekorativa julmotiv."
     }

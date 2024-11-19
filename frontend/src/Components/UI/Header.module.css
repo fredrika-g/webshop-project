@@ -1,0 +1,38 @@
+.header {
+  padding: 0.5rem;
+
+  .headerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    border-bottom: 1px solid black;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+
+      .pageTitle {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.2ch;
+        line-height: 2ch;
+      }
+
+      small {
+        font-weight: 200;
+      }
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 0.1ch;
+    }
+  }
+}

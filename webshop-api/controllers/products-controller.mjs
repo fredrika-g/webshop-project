@@ -1,6 +1,14 @@
 import { fetchData } from '../utilities/httpClient.mjs';
 import { ProductsModel, SingleProductModel } from '../models/ProductModels.mjs';
 
+const catToImg = {
+  pyssel: 'christmashobby.jpg',
+  bakning: 'christmasbaking.jpg',
+  kläder: 'christmasclothing.jpg',
+  dekoration: 'christmasdecor.jpg',
+  belysning: 'christmaslights.jpg',
+};
+
 export const listProducts = async (req, res) => {
   try {
     const result = await fetchData('products');
@@ -8,13 +16,18 @@ export const listProducts = async (req, res) => {
 
     // projecting data
     result.map((product) => {
+      const img = product.categories.find((cat) => catToImg[cat.toLowerCase()]);
+
+      const imgSrc = img ? catToImg[img] : null;
+
       products.push(
         new ProductsModel(
           product.id,
           product.title,
           product.price,
           product.categories,
-          product.stock
+          product.stock,
+          imgSrc
         )
       );
     });
