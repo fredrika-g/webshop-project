@@ -81,3 +81,23 @@ button:focus-visible {
   object-fit: cover;
   aspect-ratio: 1;
 }
+
+h1 {
+  font-weight: 500;
+}
+.heading-lg {
+  font-size: 1.8rem;
+  letter-spacing: 0.1ch;
+}
+
+.heading-md {
+  font-size: 1.4rem;
+  letter-spacing: 0.05ch;
+}
+
+h1.products,
+h1.cart {
+  margin: 0 auto;
+  width: max-content;
+  padding-block: 1rem;
+}

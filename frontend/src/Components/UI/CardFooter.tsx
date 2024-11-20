@@ -15,9 +15,15 @@ export const CardFooter = ({ product }: CardFooterProps) => {
         <Button
           content={<i className='fa-solid fa-cart-shopping'></i>}
           navigate={false}
-          id={product.id}
+          classes='default'
+          to={''}
         />
-        <Button content='Mer Info' navigate={true} id={product.id} />
+        <Button
+          content='Mer Info'
+          navigate={true}
+          classes='default'
+          to={`/product/${product.id}`}
+        />
       </ButtonGroup>
     </div>
   );

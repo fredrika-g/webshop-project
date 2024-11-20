@@ -52,7 +52,7 @@
       "id": "7",
       "title": "Doftljus med kanel och äpple",
       "price": "129",
-      "categories": ["jul", "hem"],
+      "categories": ["jul", "dekoration"],
       "stock": "150",
       "description": "Ett doftljus som sprider en varm och kryddig doft av jul."
     },
@@ -68,7 +68,7 @@
       "id": "9",
       "title": "Presentpapper, 5 rullar",
       "price": "69",
-      "categories": ["jul", "presentinslagning"],
+      "categories": ["jul", "pyssel"],
       "stock": "400",
       "description": "Set med fem rullar presentpapper i olika julmönster."
     },
@@ -82,22 +82,14 @@
     },
     {
       "id": "11",
-      "title": "Glöggmuggar, 4-pack",
-      "price": "149",
-      "categories": ["jul", "kök"],
-      "stock": "90",
-      "description": "Set med fyra små glöggmuggar med traditionellt julmotiv."
-    },
-    {
-      "id": "12",
       "title": "Julkalender för chokladälskare",
       "price": "199",
-      "categories": ["jul", "mat & dryck"],
+      "categories": ["jul", "pyssel"],
       "stock": "180",
       "description": "En julkalender fylld med chokladpraliner för att räkna ner till julafton."
     },
     {
-      "id": "13",
+      "id": "12",
       "title": "Snöglob med julmotiv",
       "price": "159",
       "categories": ["jul", "dekoration"],
@@ -105,20 +97,12 @@
       "description": "Vacker snöglob med en scen från en julig vinterdag."
     },
     {
-      "id": "14",
+      "id": "13",
       "title": "Julpyssel för barn",
       "price": "99",
       "categories": ["jul", "pyssel"],
       "stock": "300",
       "description": "Ett kit med papper, klistermärken och glitter för julpyssel."
-    },
-    {
-      "id": "15",
-      "title": "Jultallrikar, 6-pack",
-      "price": "249",
-      "categories": ["jul", "kök"],
-      "stock": "40",
-      "description": "Set med sex tallrikar med dekorativa julmotiv."
     }
   ]
 }

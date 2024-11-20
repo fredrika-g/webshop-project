@@ -1,5 +1,7 @@
 import styles from './Header.module.css';
 
+import { Button } from './Button';
+
 export const Header = () => {
   return (
     <header className={styles.header}>
@@ -10,6 +12,12 @@ export const Header = () => {
         </div>
         <p>Allt inför jul och vinter</p>
       </div>
+      <Button
+        content={<i className='fa-solid fa-cart-shopping'></i>}
+        navigate={true}
+        classes={styles.cartBtn}
+        to={`/cart`}
+      />
     </header>
   );
 };

@@ -1,5 +1,8 @@
 .header {
-  padding: 0.5rem;
+  padding-inline: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  position: relative;
 
   .headerContent {
     display: flex;
@@ -34,5 +37,11 @@
       font-size: 1.2rem;
       letter-spacing: 0.1ch;
     }
+  }
+
+  .cartBtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
   }
 }

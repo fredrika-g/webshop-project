@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { MainPage } from './Pages/MainPage.tsx';
 import { ProductPage } from './Pages/ProductPage.tsx';
+import { CartPage } from './Pages/CartPage.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')!).render(
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='product/:id' element={<ProductPage />} />
+        <Route path='cart/' element={<CartPage />} />
       </Routes>
 
       <App />
