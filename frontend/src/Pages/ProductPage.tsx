@@ -5,8 +5,7 @@ import { getAProduct } from '../Utils/getData';
 
 import { IProduct } from '../Models/IProduct';
 import { MainLayout } from '../Layouts/MainLayout';
-import { PageHeading } from '../Components/UI/PageHeading';
-
+import { ItemDisplay } from '../Components/UI/ItemDisplay';
 export const ProductPage = () => {
   const [product, setProduct] = useState<IProduct>();
 
@@ -23,13 +22,5 @@ export const ProductPage = () => {
     fetchData();
   }, []);
 
-  return (
-    <MainLayout>
-      <PageHeading
-        content={product ? product.title : 'Null'}
-        size={'md'}
-        page={'singleProduct'}
-      />
-    </MainLayout>
-  );
+  return <MainLayout>{product && <ItemDisplay item={product} />}</MainLayout>;
 };

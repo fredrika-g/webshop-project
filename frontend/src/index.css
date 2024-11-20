@@ -54,10 +54,6 @@ button:focus-visible {
       font-size: 1.1rem;
       font-weight: 400;
     }
-
-    .img {
-      border-radius: 0.4rem;
-    }
   }
 
   .cardFooter {
@@ -80,6 +76,7 @@ button:focus-visible {
   width: 100%;
   object-fit: cover;
   aspect-ratio: 1;
+  border-radius: 0.4rem;
 }
 
 h1 {
@@ -100,4 +97,63 @@ h1.cart {
   margin: 0 auto;
   width: max-content;
   padding-block: 1rem;
+}
+
+.itemDisplay {
+  display: grid;
+  gap: 2rem;
+  place-items: center;
+  padding: 1.5rem;
+
+  grid-template-areas: 'heading' 'img' 'info' 'price';
+
+  h1 {
+    grid-area: heading;
+  }
+
+  .itemInfo {
+    grid-area: info;
+  }
+
+  .buy {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    grid-area: price;
+
+    .btn {
+      scale: 1.2;
+    }
+  }
+
+  img {
+    grid-area: img;
+    width: 80%;
+    max-width: 500px;
+    min-width: 200px;
+  }
+
+  .inStock {
+    color: hsl(120, 100%, 25%);
+  }
+
+  .outOfStock {
+    color: hsl(0, 100%, 50%);
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .itemDisplay {
+    margin: 0 auto;
+    width: fit-content;
+    grid-template-areas: 'heading img' 'info img' 'price img';
+
+    h1 {
+      place-self: start;
+    }
+
+    .buy {
+      place-self: end;
+    }
+  }
 }

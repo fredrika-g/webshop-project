@@ -1,15 +1,20 @@
 import styles from './Header.module.css';
 
+import { NavLink } from 'react-router-dom';
+
 import { Button } from './Button';
 
 export const Header = () => {
+  const test = () => {
+    console.log('testar clickhandler');
+  };
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
-        <div>
+        <NavLink to={'/'}>
           <div className={styles.pageTitle}>Julshopen</div>
           <small>est. 2024</small>
-        </div>
+        </NavLink>
         <p>Allt inför jul och vinter</p>
       </div>
       <Button
@@ -17,6 +22,7 @@ export const Header = () => {
         navigate={true}
         classes={styles.cartBtn}
         to={`/cart`}
+        clickHandler={() => {}}
       />
     </header>
   );

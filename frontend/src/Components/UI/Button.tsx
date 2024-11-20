@@ -7,11 +7,22 @@ type ButtonProps = {
   navigate: boolean;
   classes: string;
   to: string;
+  clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const Button = ({ content, navigate, classes, to }: ButtonProps) => {
+export const Button = ({
+  content,
+  navigate,
+  classes,
+  to,
+  clickHandler,
+}: ButtonProps) => {
   if (!navigate) {
-    return <button className={`btn ${classes}`}>{content}</button>;
+    return (
+      <button className={`btn ${classes}`} onClick={clickHandler}>
+        {content}
+      </button>
+    );
   } else {
     return (
       <NavLink className={`btn ${classes}`} to={to}>
