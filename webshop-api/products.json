@@ -1,4 +1,17 @@
 {
+  "cart": [
+    {
+      "id": "1",
+      "title": "Julgran i plast, 180 cm",
+      "price": "499",
+      "categories": [
+        "jul",
+        "dekoration"
+      ],
+      "stock": "120",
+      "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
+    }
+  ],
   "products": [
     {
       "id": "1",
@@ -19,7 +32,7 @@
         "jul",
         "belysning"
       ],
-      "stock": 74,
+      "stock": 73,
       "description": "Klassisk adventsljusstake i trä med sju ljus för att sprida julstämning."
     },
     {

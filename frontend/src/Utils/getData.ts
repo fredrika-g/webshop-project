@@ -1,10 +1,11 @@
 import axios from 'axios';
 
-const url = 'http://localhost:5000/products/';
+const productUrl = 'http://localhost:5000/products/';
+const cartUrl = 'http://localhost:5000/cart/';
 
 export const getProducts = async () => {
   try {
-    const result = await axios.get(url);
+    const result = await axios.get(productUrl);
 
     if (result.status === 200) {
       const products = result.data.result;
@@ -19,7 +20,7 @@ export const getProducts = async () => {
 
 export const getAProduct = async (productId: number) => {
   try {
-    const result = await axios.get(`${url}${productId}`);
+    const result = await axios.get(`${productUrl}${productId}`);
 
     if (result.status === 200) {
       const product = result.data.result;
@@ -28,6 +29,16 @@ export const getAProduct = async (productId: number) => {
     } else {
       console.log(`Something went wrong in /products/${productId}`);
     }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const getCart = async () => {
+  try {
+    const response = await axios.get(cartUrl);
+
+    return response.data.result;
   } catch (error) {
     console.log(error);
   }

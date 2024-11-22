@@ -1,6 +1,7 @@
 import { fetchData } from '../utilities/httpClient.mjs';
 import { ProductsModel, SingleProductModel } from '../models/ProductModels.mjs';
 
+// assign image to product
 const catToImg = {
   pyssel: 'christmashobby.jpg',
   bakning: 'christmasbaking.jpg',
@@ -60,7 +61,7 @@ export const findProduct = async (req, res) => {
     );
 
     res.status(200).json({ success: true, result: product });
-    return;
+    return result;
   } catch (error) {
     console.log(error);
     res.status(500).json({ success: false, message: error });
@@ -90,6 +91,40 @@ export const updateProduct = async (req, res) => {
     });
 
     res.status(200).json({ success: true, result });
+    return;
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: error });
+  }
+};
+
+// cart actions
+export const getCart = async (req, res) => {
+  try {
+    const result = await fetchData('cart');
+
+    res.status(200).json({ success: true, result });
+    return;
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: error });
+  }
+};
+
+export const addToCart = async (req, res) => {
+  const productId = req.params.id;
+
+  try {
+    const product = await fetchData(`products/${productId}`);
+
+    const result = await fetchData('cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(product),
+    });
+    res.status(200).json({ success: true, result: product });
     return;
   } catch (error) {
     console.log(error);

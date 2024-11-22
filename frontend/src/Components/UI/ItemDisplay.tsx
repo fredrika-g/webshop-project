@@ -9,7 +9,7 @@ import { Image } from './Image';
 export const ItemDisplay = ({ item }: { item: IProduct }) => {
   const handleClick = async () => {
     // add item to cart
-    await addToCart(item.id, item.stock);
+    await addToCart(item.id);
   };
   return (
     <section className='itemDisplay'>

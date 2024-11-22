@@ -1,21 +1,19 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
+// import dotenv from 'dotenv';
 
 import products from './routes/products-routes.mjs';
+import cart from './routes/cart-routes.mjs';
 
 const app = express();
 
-dotenv.config();
-
-const PORT = process.env.PORT || 5010;
-const DB_PORT = process.env.DB_PORT;
-const BASE_URL = process.env.BASE_URL;
+const PORT = 5000;
 
 // middleware
 app.use(cors());
 app.use(express.json());
 app.use('/products', products);
+app.use('/cart', cart);
 
 // starting server...
 app.listen(PORT, () => {
