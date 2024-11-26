@@ -1,5 +1,5 @@
 import express from 'express';
-import { getCart, addToCart } from '../controllers/products-controller.mjs';
+import { getCart, addToCart } from '../controllers/webshop-controller.mjs';
 
 const router = express.Router();
 

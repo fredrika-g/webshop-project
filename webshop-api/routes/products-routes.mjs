@@ -3,8 +3,7 @@ import {
   listProducts,
   findProduct,
   updateProduct,
-  getCart,
-} from '../controllers/products-controller.mjs';
+} from '../controllers/webshop-controller.mjs';
 
 const router = express.Router();
 

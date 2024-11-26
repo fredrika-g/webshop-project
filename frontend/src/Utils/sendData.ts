@@ -20,7 +20,7 @@ export const countDownStock = async (id: number, currentStock: number) => {
 
 export const addToCart = async (id: number) => {
   try {
-    const result = await axios.get(`${cartUrl}/add/${id}`);
+    const result = await axios.get(`${cartUrl}add/${id}`);
 
     if (result.status === 200) {
       return true;

@@ -1,12 +1,18 @@
 import { ButtonGroup } from './ButtonGroup';
 import { Button } from './Button';
 import { IProduct } from '../../Models/IProduct';
+import { addToCart } from '../../Utils/sendData';
 
 type CardFooterProps = {
   product: IProduct;
 };
 
 export const CardFooter = ({ product }: CardFooterProps) => {
+  const handleClick = async () => {
+    // add item to cart
+    await addToCart(product.id);
+  };
+
   return (
     <div className='cardFooter'>
       <p className='price'>{product.price} sek</p>
@@ -17,6 +23,7 @@ export const CardFooter = ({ product }: CardFooterProps) => {
           navigate={false}
           classes='default'
           to={''}
+          clickHandler={handleClick}
         />
         <Button
           content='Mer Info'

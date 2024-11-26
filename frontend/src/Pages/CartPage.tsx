@@ -7,6 +7,7 @@ import { IProduct } from '../Models/IProduct';
 export const CartPage = () => {
   const [cart, setCart] = useState<IProduct[]>([]);
 
+  // retrieving the shopping cart
   useEffect(() => {
     const fetchData = async () => {
       setCart(await getCart());

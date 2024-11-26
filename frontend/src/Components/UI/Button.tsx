@@ -7,7 +7,7 @@ type ButtonProps = {
   navigate: boolean;
   classes: string;
   to: string;
-  clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  clickHandler?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 export const Button = ({

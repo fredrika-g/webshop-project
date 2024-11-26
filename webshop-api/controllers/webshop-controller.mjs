@@ -111,6 +111,7 @@ export const getCart = async (req, res) => {
   }
 };
 
+// runs when: 5000/cart/add/:id
 export const addToCart = async (req, res) => {
   const productId = req.params.id;
 
