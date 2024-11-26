@@ -32,3 +32,18 @@ export const addToCart = async (id: number) => {
     console.log('caught error:', error);
   }
 };
+
+export const placeOrder = async () => {
+  try {
+    const result = await axios.get(`${cartUrl}confirm`);
+
+    if (result.status === 200) {
+      return true;
+    } else {
+      console.log('Something went wrong in /cart/add');
+      return false;
+    }
+  } catch (error) {
+    console.log('caught error:', error);
+  }
+};

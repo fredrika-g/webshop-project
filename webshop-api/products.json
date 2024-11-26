@@ -1,39 +1,5 @@
 {
-  "cart": [
-    {
-      "id": "3",
-      "title": "Julgranskulor, 20-pack",
-      "price": "129",
-      "categories": [
-        "jul",
-        "dekoration"
-      ],
-      "stock": "300",
-      "description": "Set med 20 julgranskulor i blandade färger och mönster."
-    },
-    {
-      "id": "1",
-      "title": "Julgran i plast, 180 cm",
-      "price": "499",
-      "categories": [
-        "jul",
-        "dekoration"
-      ],
-      "stock": "120",
-      "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
-    },
-    {
-      "id": "1",
-      "title": "Julgran i plast, 180 cm",
-      "price": "499",
-      "categories": [
-        "jul",
-        "dekoration"
-      ],
-      "stock": "120",
-      "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
-    }
-  ],
+  "cart": [],
   "products": [
     {
       "id": "1",
@@ -43,7 +9,7 @@
         "jul",
         "dekoration"
       ],
-      "stock": "120",
+      "stock": 107,
       "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
     },
     {

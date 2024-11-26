@@ -13,7 +13,17 @@ export const CartList = ({ productsInCart }: CartListProps) => {
     []
   );
 
+  //   on first mount
   useEffect(() => {
+    productMapper();
+  }, []);
+
+  //   on state change
+  useEffect(() => {
+    productMapper();
+  }, [productsInCart]);
+
+  const productMapper = () => {
     const productMap = new Map<number, { product: IProduct; amount: number }>();
     // get unique values in cart + retrieve how many of each product there are
     productsInCart.forEach((product) => {
@@ -26,7 +36,7 @@ export const CartList = ({ productsInCart }: CartListProps) => {
 
     // convert Map to array and set state
     setProductSummary(Array.from(productMap.values()));
-  }, [productsInCart]);
+  };
 
   return (
     <ul>

@@ -1,4 +1,5 @@
 import { IProduct } from '../../Models/IProduct';
+import { placeOrder } from '../../Utils/sendData';
 import { Button } from './Button';
 import { CartList } from './CartList';
 
@@ -7,6 +8,9 @@ type CartDisplayProps = {
 };
 
 export const CartDisplay = ({ productsInCart }: CartDisplayProps) => {
+  const handleClick = async () => {
+    await placeOrder();
+  };
   return (
     <section className='cartDisplay'>
       {/* list of products */}

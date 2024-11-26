@@ -161,5 +161,26 @@ h1.cart {
 .cartDisplay {
   ul {
     list-style: none;
+
+    margin: 0 auto;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+
+    li {
+      border-bottom: 1px solid black;
+      padding-block: 0.5rem;
+
+      span {
+        margin-inline: 0.2rem 0.5rem;
+      }
+    }
+
+    > li:first-child {
+      border-top: none;
+    }
+    > li:last-child {
+      border-bottom: none;
+    }
   }
 }
