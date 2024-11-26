@@ -71,7 +71,7 @@ export const findProduct = async (req, res) => {
 // cart actions
 export const getCart = async (req, res) => {
   try {
-    const result = await fetchData('cart');
+    const result = await fetchData(`cart`);
 
     res.status(200).json({ success: true, result });
     return;

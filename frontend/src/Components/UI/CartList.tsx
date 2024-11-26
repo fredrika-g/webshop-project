@@ -14,9 +14,9 @@ export const CartList = ({ productsInCart }: CartListProps) => {
   );
 
   //   on first mount
-  useEffect(() => {
-    productMapper();
-  }, []);
+  // useEffect(() => {
+  //   productMapper();
+  // }, []);
 
   //   on state change
   useEffect(() => {

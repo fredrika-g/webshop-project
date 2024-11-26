@@ -21,7 +21,7 @@ export const CartPage = () => {
     <>
       <MainLayout>
         <PageHeading content={'Varukorg'} size={'md'} page={'cart'} />
-        <CartDisplay productsInCart={cart} />
+        {cart && cart.length > 0 && <CartDisplay productsInCart={cart} />}
       </MainLayout>
     </>
   );

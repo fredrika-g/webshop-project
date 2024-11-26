@@ -13,15 +13,14 @@ export const CartDisplay = ({ productsInCart }: CartDisplayProps) => {
   };
   return (
     <section className='cartDisplay'>
-      {/* list of products */}
       <CartList productsInCart={productsInCart} />
 
-      {/* buy button */}
       <Button
         content={'Beställ'}
         navigate={false}
         classes={'btn btn-confirm'}
         to={''}
+        clickHandler={handleClick}
       />
     </section>
   );

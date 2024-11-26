@@ -159,6 +159,8 @@ h1.cart {
 }
 
 .cartDisplay {
+  display: flex;
+  flex-direction: column;
   ul {
     list-style: none;
 
@@ -182,5 +184,9 @@ h1.cart {
     > li:last-child {
       border-bottom: none;
     }
+  }
+
+  .btn-confirm {
+    margin: 0 auto;
   }
 }
