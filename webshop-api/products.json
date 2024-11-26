@@ -12,15 +12,26 @@
       "description": "Set med 20 julgranskulor i blandade färger och mönster."
     },
     {
-      "id": "2",
-      "title": "Adventsljusstake i trä",
-      "price": "199",
+      "id": "1",
+      "title": "Julgran i plast, 180 cm",
+      "price": "499",
       "categories": [
         "jul",
-        "belysning"
+        "dekoration"
       ],
-      "stock": 73,
-      "description": "Klassisk adventsljusstake i trä med sju ljus för att sprida julstämning."
+      "stock": "120",
+      "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
+    },
+    {
+      "id": "1",
+      "title": "Julgran i plast, 180 cm",
+      "price": "499",
+      "categories": [
+        "jul",
+        "dekoration"
+      ],
+      "stock": "120",
+      "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
     }
   ],
   "products": [

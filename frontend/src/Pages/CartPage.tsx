@@ -3,6 +3,7 @@ import { PageHeading } from '../Components/UI/PageHeading';
 import { useEffect, useState } from 'react';
 import { getCart } from '../Utils/getData';
 import { IProduct } from '../Models/IProduct';
+import { CartDisplay } from '../Components/UI/CartDisplay';
 
 export const CartPage = () => {
   const [cart, setCart] = useState<IProduct[]>([]);
@@ -20,12 +21,7 @@ export const CartPage = () => {
     <>
       <MainLayout>
         <PageHeading content={'Varukorg'} size={'md'} page={'cart'} />
-        <div>
-          {cart &&
-            cart.map((item) => {
-              return <p key={item.id}>{item.title}</p>;
-            })}
-        </div>
+        <CartDisplay productsInCart={cart} />
       </MainLayout>
     </>
   );

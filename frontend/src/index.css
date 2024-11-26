@@ -157,3 +157,9 @@ h1.cart {
     }
   }
 }
+
+.cartDisplay {
+  ul {
+    list-style: none;
+  }
+}
