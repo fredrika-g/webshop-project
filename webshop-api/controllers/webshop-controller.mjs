@@ -127,7 +127,7 @@ export const placeOrder = async (req, res) => {
 
       // removing all occurences of the product in the shopping cart
       for (let i = 0; i < product.quantity; i++) {
-        await fetchData(`/cart/${product.id}`, {
+        await fetchData(`cart/${product.id}`, {
           method: 'DELETE',
         });
       }
@@ -137,6 +137,19 @@ export const placeOrder = async (req, res) => {
     }
 
     res.status(200).json({ success: true, message: 'Order placed' });
+    return;
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ success: false, message: error });
+  }
+};
+
+export const deleteFromCart = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const result = await fetchData(`cart/${id}`, { method: 'DELETE' });
+
+    res.status(200).json({ success: true, result });
     return;
   } catch (error) {
     console.log(error);

@@ -12,16 +12,22 @@ export const CartList = ({ productsInCart }: CartListProps) => {
   const [productSummary, setProductSummary] = useState<ProductSummaryType[]>(
     []
   );
+  const [hasChanged, setHasChanged] = useState<boolean>(false);
 
-  //   on first mount
-  // useEffect(() => {
-  //   productMapper();
-  // }, []);
+  // on first mount
+  useEffect(() => {
+    productMapper();
+  }, []);
 
   //   on state change
   useEffect(() => {
     productMapper();
   }, [productsInCart]);
+
+  useEffect(() => {
+    productMapper();
+    console.log('hasChanged', hasChanged);
+  }, [hasChanged]);
 
   const productMapper = () => {
     const productMap = new Map<number, { product: IProduct; amount: number }>();
@@ -42,7 +48,13 @@ export const CartList = ({ productsInCart }: CartListProps) => {
     <ul>
       {productSummary &&
         productSummary.map((item) => {
-          return <CartItem key={item.product.id} item={item} />;
+          return (
+            <CartItem
+              key={item.product.id}
+              item={item}
+              stateSetter={setHasChanged}
+            />
+          );
         })}
     </ul>
   );
