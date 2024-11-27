@@ -1,4 +1,6 @@
-import { SetStateAction } from 'react';
+import { getCart } from '../../Utils/getData';
+import { useAppDispatch } from '../../Redux/configureStore';
+
 import { ProductSummaryType } from '../../Models/ProductSummaryType';
 import { deleteItemFromCart } from '../../Utils/sendData';
 
@@ -6,15 +8,16 @@ import { Button } from './Button';
 
 type CartItemProps = {
   item: ProductSummaryType;
-  stateSetter: React.Dispatch<SetStateAction<boolean>>;
 };
 
-export const CartItem = ({ item, stateSetter }: CartItemProps) => {
+export const CartItem = ({ item }: CartItemProps) => {
+  const dispatch = useAppDispatch();
+
   const handleDelete = async () => {
     // delete item
     await deleteItemFromCart(item.product.id);
 
-    stateSetter(true);
+    dispatch(getCart());
   };
   return (
     <li>

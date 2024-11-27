@@ -1,23 +1,22 @@
-import { useSelector } from 'react-redux';
+import { useTypedSelector } from '../Redux/configureStore';
+import { useAppDispatch } from '../Redux/configureStore';
+import { getCart } from '../Utils/getData';
+
+import { useEffect } from 'react';
 
 import { MainLayout } from '../Layouts/MainLayout';
 import { PageHeading } from '../Components/UI/PageHeading';
-import { useEffect, useState } from 'react';
-import { getCart } from '../Utils/getData';
-import { IProduct } from '../Models/IProduct';
 import { CartDisplay } from '../Components/UI/CartDisplay';
 
 export const CartPage = () => {
-  const [cart, setCart] = useState<IProduct[]>([]);
+  // const [cart, setCart] = useState<IProduct[]>([]);
+  const dispatch = useAppDispatch();
+  const cart = useTypedSelector((store) => store.cart.cart);
 
   // retrieving the shopping cart
   useEffect(() => {
-    const fetchData = async () => {
-      setCart(await getCart());
-    };
-
-    fetchData();
-  }, []);
+    dispatch(getCart());
+  }, [dispatch]);
 
   return (
     <>
