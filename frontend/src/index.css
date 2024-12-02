@@ -189,4 +189,11 @@ h1.cart {
   .btn-confirm {
     margin: 0 auto;
   }
+
+  .confirmation {
+    margin: 0 auto;
+    padding-block: 1.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }

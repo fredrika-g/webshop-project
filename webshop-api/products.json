@@ -9,7 +9,7 @@
         "jul",
         "dekoration"
       ],
-      "stock": 99,
+      "stock": 96,
       "description": "En naturtrogen julgran i plast som är lätt att montera och återanvända."
     },
     {
@@ -20,7 +20,7 @@
         "jul",
         "belysning"
       ],
-      "stock": 72,
+      "stock": 71,
       "description": "Klassisk adventsljusstake i trä med sju ljus för att sprida julstämning."
     },
     {
@@ -31,7 +31,7 @@
         "jul",
         "dekoration"
       ],
-      "stock": "300",
+      "stock": 297,
       "description": "Set med 20 julgranskulor i blandade färger och mönster."
     },
     {
@@ -53,7 +53,7 @@
         "jul",
         "belysning"
       ],
-      "stock": "50",
+      "stock": 49,
       "description": "Energisnål LED-ljusslinga som passar både inomhus och utomhus."
     },
     {
@@ -64,7 +64,7 @@
         "jul",
         "kläder"
       ],
-      "stock": "30",
+      "stock": 29,
       "description": "En klassisk tomtedräkt med hatt, jacka och byxor för julens festligheter."
     },
     {
@@ -75,7 +75,7 @@
         "jul",
         "dekoration"
       ],
-      "stock": "150",
+      "stock": 149,
       "description": "Ett doftljus som sprider en varm och kryddig doft av jul."
     },
     {
@@ -130,7 +130,7 @@
         "jul",
         "dekoration"
       ],
-      "stock": "80",
+      "stock": 79,
       "description": "Vacker snöglob med en scen från en julig vinterdag."
     },
     {
@@ -152,7 +152,7 @@
         "jul",
         "pyssel"
       ],
-      "stock": 288,
+      "stock": 287,
       "description": "Ett kit med papper, klistermärken och glitter för julpyssel."
     }
   ]

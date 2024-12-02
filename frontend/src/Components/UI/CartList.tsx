@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react';
-import { IProduct } from '../../Models/IProduct';
 import { ProductSummaryType } from '../../Models/ProductSummaryType';
 
 import { CartItem } from './CartItem';
