@@ -22,13 +22,6 @@ describe('Main Page Component', () => {
     expect(screen.getByRole('heading')).toHaveTextContent(/våra produkter/i);
   });
 
-  it('should display products from API', async () => {
-    await waitFor(() => {
-      expect(screen.getByText('Julgran i plast, 180 cm')).toBeInTheDocument();
-      expect(screen.getByText('Adventsljusstake i trä')).toBeInTheDocument();
-    });
-  });
-
   it('should show products that match the data defined in msw handler', async () => {
     let productTitles: IProduct[] = [];
     server.events.on('response:mocked', async ({ response }) => {

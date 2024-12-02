@@ -6,16 +6,31 @@ export const handlers = [
       success: true,
       result: [
         {
-          id: '1',
+          id: 1,
           title: 'Julgran i plast, 180 cm',
-          price: '499',
+          price: 499,
         },
         {
-          id: '2',
+          id: 2,
           title: 'Adventsljusstake i trä',
-          price: '199',
+          price: 199,
         },
       ],
+    });
+  }),
+  http.get('http://localhost:5000/products/:id', () => {
+    return HttpResponse.json({
+      success: true,
+      result: {
+        id: 1,
+        title: 'Julgran i plast, 180 cm',
+        price: 499,
+        categories: ['jul', 'dekoration'],
+        stock: 96,
+        img: 'christmasdecor.jpg',
+        description:
+          'En naturtrogen julgran i plast som är lätt att montera och återanvända.',
+      },
     });
   }),
 ];
