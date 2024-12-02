@@ -5,9 +5,6 @@ import { NavLink } from 'react-router-dom';
 import { Button } from './Button';
 
 export const Header = () => {
-  const test = () => {
-    console.log('testar clickhandler');
-  };
   return (
     <header className={styles.header}>
       <div className={styles.headerContent}>
@@ -22,7 +19,6 @@ export const Header = () => {
         navigate={true}
         classes={styles.cartBtn}
         to={`/cart`}
-        clickHandler={() => {}}
       />
     </header>
   );

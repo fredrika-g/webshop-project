@@ -24,7 +24,7 @@ export const placeOrder = async () => {
     if (result.status === 200) {
       return true;
     } else {
-      console.log('Something went wrong in /cart/add');
+      console.log('Something went wrong in /cart/confirm');
       return false;
     }
   } catch (error) {
@@ -40,6 +40,7 @@ export const deleteItemFromCart = async (productId: number) => {
     if (result.status === 200) {
       return true;
     } else {
+      console.log('Something went wrong in /cart/delete');
       return false;
     }
   } catch (error) {

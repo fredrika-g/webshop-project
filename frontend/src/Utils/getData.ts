@@ -37,18 +37,8 @@ export const getAProduct = async (productId: number) => {
   }
 };
 
-// export const getCart = async () => {
-//   try {
-//     const response = await axios.get(cartUrl);
-
-//     return response.data.result;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
 export const getCart = createAsyncThunk('cart', async (_, { dispatch }) => {
-  const response = await axios.get(cartUrl); // Din backend-URL
+  const response = await axios.get(cartUrl);
 
   const productMap = new Map<number, { product: IProduct; amount: number }>();
   // get unique values in cart + retrieve how many of each product there are
@@ -63,5 +53,6 @@ export const getCart = createAsyncThunk('cart', async (_, { dispatch }) => {
   // convert Map to array and return it
   const cart = Array.from(productMap.values());
 
-  dispatch(setCart(cart)); // Uppdaterar cart i store
+  // update cart in store
+  dispatch(setCart(cart));
 });
