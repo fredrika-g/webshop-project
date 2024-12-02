@@ -33,4 +33,20 @@ export const handlers = [
       },
     });
   }),
+  http.get('http://localhost:5000/cart', () => {
+    return HttpResponse.json({
+      success: true,
+      result: [
+        {
+          id: 1,
+          title: 'Julgran i plast, 180 cm',
+          price: 499,
+          categories: ['jul', 'dekoration'],
+          stock: 96,
+          description:
+            'En naturtrogen julgran i plast som är lätt att montera och återanvända.',
+        },
+      ],
+    });
+  }),
 ];

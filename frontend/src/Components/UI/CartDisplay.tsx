@@ -27,7 +27,7 @@ export const CartDisplay = ({ productsInCart }: CartDisplayProps) => {
     }, 3000);
   };
   return (
-    <section className='cartDisplay'>
+    <section className='cartDisplay' data-testid='cart-display'>
       <CartList productsInCart={productsInCart} />
 
       <Button

@@ -22,7 +22,6 @@ describe('Product Page Component', () => {
       let product: IProduct;
 
       server.events.on('response:mocked', async ({ request, response }) => {
-        console.log(request.url);
         const payload = await response.json();
         product = payload.result;
       });
