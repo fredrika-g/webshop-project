@@ -18,11 +18,12 @@ export const handlers = [
       ],
     });
   }),
-  http.get('http://localhost:5000/products/:id', () => {
+  http.get('http://localhost:5000/products/:id', (req) => {
+    const { id } = req.params;
     return HttpResponse.json({
       success: true,
       result: {
-        id: 1,
+        id: Number(id),
         title: 'Julgran i plast, 180 cm',
         price: 499,
         categories: ['jul', 'dekoration'],
