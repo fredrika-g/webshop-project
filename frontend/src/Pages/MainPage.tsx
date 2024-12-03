@@ -1,4 +1,4 @@
-import { getProducts } from '../Utils/getData';
+import { getProductData } from '../Utils/getData';
 import { useEffect, useState } from 'react';
 
 import { IProduct } from '../Models/IProduct';
@@ -14,7 +14,7 @@ export const MainPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setProducts(await getProducts());
+      setProducts(await getProductData());
     };
 
     fetchData();

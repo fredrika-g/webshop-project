@@ -1,11 +1,11 @@
 import { IProduct } from '../../Models/IProduct';
-import { addToCart } from '../../Utils/sendData';
+import { sendData } from '../../Utils/sendData';
 import { Button } from './Button';
 
 export const ProductInfo = ({ item }: { item: IProduct }) => {
   const handleClick = async () => {
     // add item to cart
-    await addToCart(item.id);
+    await sendData('add', item.id);
   };
   return (
     <>

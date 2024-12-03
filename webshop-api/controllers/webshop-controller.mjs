@@ -124,16 +124,28 @@ export const placeOrder = async (req, res) => {
 
     for (const productId in groupedProducts) {
       const product = groupedProducts[productId];
+      console.log(
+        `Updating stock for product ${product.id}: current stock ${product.stock}, quantity ${product.quantity}`
+      );
 
       // removing all occurences of the product in the shopping cart
-      for (let i = 0; i < product.quantity; i++) {
+      for (let i = 0; i <= product.quantity; i++) {
+        console.log(
+          'DELETE',
+          'id',
+          product.id,
+          'quantity',
+          product.quantity,
+          'i',
+          i
+        );
         await fetchData(`cart/${product.id}`, {
           method: 'DELETE',
         });
       }
 
       // making the adjustment in product stock after purchase is completed
-      await updateProduct(product.id, product.stock, product.quantity);
+      await updateProduct(product.id, product.quantity);
     }
 
     res.status(200).json({ success: true, message: 'Order placed' });
@@ -158,14 +170,14 @@ export const deleteFromCart = async (req, res) => {
 };
 
 // used locally
-const updateProduct = async (id, currentStock, quantity) => {
+const updateProduct = async (id, quantity) => {
   try {
     // 1. get current product
     const currentProduct = await fetchData(`products/${id}`);
     // 2. update product stock
     const updatedProduct = {
       ...currentProduct,
-      stock: currentStock - quantity,
+      stock: currentProduct.stock - quantity,
     };
 
     const result = await fetchData(`products/${id}`, {

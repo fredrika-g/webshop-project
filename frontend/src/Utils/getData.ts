@@ -6,13 +6,14 @@ import { IProduct } from '../Models/IProduct';
 const productUrl = 'http://localhost:5000/products/';
 const cartUrl = 'http://localhost:5000/cart/';
 
-export const getProducts = async () => {
+export const getProductData = async (productId?: number) => {
+  const url = productId ? `${productUrl}${productId}` : productUrl;
   try {
-    const result = await axios.get(productUrl);
+    const result = await axios.get(url);
 
     if (result.status === 200) {
-      const products = result.data.result;
-      return products;
+      const productData = result.data.result;
+      return productData;
     } else {
       console.log('Something went wrong in: /products');
     }
@@ -21,22 +22,7 @@ export const getProducts = async () => {
   }
 };
 
-export const getAProduct = async (productId: number) => {
-  try {
-    const result = await axios.get(`${productUrl}${productId}`);
-
-    if (result.status === 200) {
-      const product = result.data.result;
-
-      return product;
-    } else {
-      console.log(`Something went wrong in /products/${productId}`);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
-
+// redux toolkit / managing the cart
 export const getCart = createAsyncThunk('cart', async (_, { dispatch }) => {
   const response = await axios.get(cartUrl);
 

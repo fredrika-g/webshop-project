@@ -9,10 +9,14 @@ export const fetchData = async (endpoint, body = null) => {
       const result = await response.json();
       return result;
     } else {
-      throw new Error(`Something went wrong in fetchData: ${endpoint}`);
+      throw new Error(
+        `Fetch error: ${endpoint}, Status: ${
+          response.status
+        }, Message: ${await response.text()}`
+      );
     }
   } catch (error) {
     console.log(error);
-    throw new Error(`An error occured in fetchData: ${error}`);
+    throw new Error(`Fetch error: ${endpoint},  Message: ${error}`);
   }
 };

@@ -1,8 +1,8 @@
 import { useAppDispatch } from '../../Redux/configureStore';
 import { getCart } from '../../Utils/getData';
+import { sendData } from '../../Utils/sendData';
 
 import { ProductSummaryType } from '../../Models/ProductSummaryType';
-import { placeOrder } from '../../Utils/sendData';
 import { Button } from './Button';
 import { CartList } from './CartList';
 import { useState } from 'react';
@@ -17,7 +17,7 @@ export const CartDisplay = ({ productsInCart }: CartDisplayProps) => {
   const [message, setMessage] = useState<string>('');
 
   const handleClick = async () => {
-    await placeOrder();
+    await sendData('confirm');
 
     setMessage('Order bekräftad! Tack för din beställning!');
 

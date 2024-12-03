@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { getAProduct } from '../Utils/getData';
+import { getProductData } from '../Utils/getData';
 
 import { IProduct } from '../Models/IProduct';
 import { MainLayout } from '../Layouts/MainLayout';
@@ -16,7 +16,7 @@ export const ProductPage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setProduct(await getAProduct(Number(id)));
+      setProduct(await getProductData(Number(id)));
     };
 
     fetchData();
