@@ -2,6 +2,7 @@ import { ButtonGroup } from './ButtonGroup';
 import { Button } from './Button';
 import { IProduct } from '../../Models/IProduct';
 import { sendData } from '../../Utils/sendData';
+import { ACTIONS } from '../../Utils/sendData';
 
 type CardFooterProps = {
   product: IProduct;
@@ -10,7 +11,7 @@ type CardFooterProps = {
 export const CardFooter = ({ product }: CardFooterProps) => {
   const handleClick = async () => {
     // add item to cart
-    await sendData('add', product.id);
+    await sendData(ACTIONS.ADD, product.id);
   };
 
   return (

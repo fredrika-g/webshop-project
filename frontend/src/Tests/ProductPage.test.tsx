@@ -3,11 +3,11 @@ import '@testing-library/jest-dom';
 import { describe, expect, it, beforeEach } from 'vitest';
 import { render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+import { act } from 'react';
 
 import { getProductData } from '../Utils/getData';
 
 // Component to test...
-import { act } from 'react';
 import { ItemDisplay } from '../Components/UI/ItemDisplay';
 
 beforeEach(async () => {

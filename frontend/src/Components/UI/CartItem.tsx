@@ -3,6 +3,7 @@ import { useAppDispatch } from '../../Redux/configureStore';
 
 import { ProductSummaryType } from '../../Models/ProductSummaryType';
 import { sendData } from '../../Utils/sendData';
+import { ACTIONS } from '../../Utils/sendData';
 
 import { Button } from './Button';
 
@@ -15,8 +16,9 @@ export const CartItem = ({ item }: CartItemProps) => {
 
   const handleDelete = async () => {
     // delete item
-    await sendData('delete', item.product.id);
+    await sendData(ACTIONS.DELETE, item.product.id);
 
+    // update state
     dispatch(getCart());
   };
   return (

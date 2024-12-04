@@ -124,21 +124,9 @@ export const placeOrder = async (req, res) => {
 
     for (const productId in groupedProducts) {
       const product = groupedProducts[productId];
-      console.log(
-        `Updating stock for product ${product.id}: current stock ${product.stock}, quantity ${product.quantity}`
-      );
 
       // removing all occurences of the product in the shopping cart
-      for (let i = 0; i <= product.quantity; i++) {
-        console.log(
-          'DELETE',
-          'id',
-          product.id,
-          'quantity',
-          product.quantity,
-          'i',
-          i
-        );
+      for (let i = 0; i < product.quantity; i++) {
         await fetchData(`cart/${product.id}`, {
           method: 'DELETE',
         });

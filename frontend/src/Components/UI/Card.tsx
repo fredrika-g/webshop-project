@@ -4,8 +4,6 @@ import { IProduct } from '../../Models/IProduct';
 
 import { CardHeader } from './CardHeader';
 import { CardFooter } from './CardFooter';
-import React from 'react';
-import { MainPage } from '../../Pages/MainPage';
 
 type CardProps = {
   product: IProduct;
